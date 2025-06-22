@@ -22,9 +22,8 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@mycomponents/speech-to-text-core": "workspace:*",
-    "@mycomponents/text-to-speech-core": "workspace:*",
-    "@mycomponents/audio-recorder-core": "workspace:*",
+    "@mycomponents/audio-core": "workspace:*",
+    "@mycomponents/ui-core": "workspace:*",
     "@mycomponents/utils": "workspace:*",
     "clsx": "^2.1.0"
   },

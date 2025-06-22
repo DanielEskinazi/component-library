@@ -24,8 +24,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "clean": "turbo run clean && rimraf node_modules",
-    "storybook": "npm run storybook -w @mycomponents/storybook",
-    "docs": "npm run dev -w @mycomponents/docs",
+    "storybook": "npm run dev -w @mycomponents/storybook",
     "create-component": "node scripts/create-component.js",
     "publish-packages": "turbo run build && changeset publish",
     "version-packages": "changeset version"
@@ -46,7 +45,7 @@
     "turbo": "^1.11.3",
     "typescript": "^5.3.3"
   },
-  "packageManager": "npm@10.2.4",
+  "packageManager": "pnpm@8.15.0",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"

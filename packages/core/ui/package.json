@@ -1,0 +1,42 @@
+{
+  "name": "@mycomponents/ui-core", 
+  "version": "0.0.1",
+  "description": "Core UI functionality for multi-platform component library - theming, clipboard, sharing, and UI utilities",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs", 
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "jest", 
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "ui",
+    "theme",
+    "clipboard", 
+    "share",
+    "utilities",
+    "theming",
+    "dark-mode"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0", 
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.1",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false
+}

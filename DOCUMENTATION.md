@@ -2,20 +2,22 @@
 
 ## Overview
 
-This component library provides a comprehensive set of multi-platform components with extensive documentation through Storybook and Docusaurus.
+This component library provides a comprehensive set of multi-platform components with extensive documentation through Storybook.
 
-## Documentation Sites
+## Documentation
 
-### 1. Storybook - Interactive Component Playground
+### Storybook - Interactive Component Playground
 
 Located in `documentation/storybook/`
 
 **Features:**
 - Interactive component demos with live controls
 - Multiple story variations for each component
-- Accessibility testing
+- Accessibility testing with a11y addon
 - Mobile viewport testing
 - Dark/light theme support
+- MDX documentation pages
+- Auto-generated prop tables
 
 **Components Documented:**
 - **Speech to Text**: 8 stories including multi-language support, continuous recording, error handling
@@ -25,37 +27,13 @@ Located in `documentation/storybook/`
 - **Theme Toggle**: 9 stories showing button, switch, and dropdown variants
 - **Share Button**: 9 stories with native share API and social media fallbacks
 
-### 2. Docusaurus - Comprehensive Documentation
+**Documentation Pages:**
+- Welcome page with quick start guide
+- Installation instructions
+- Component API reference
+- Usage examples and best practices
 
-Located in `documentation/docusaurus/`
-
-**Structure:**
-```
-docs/
-├── getting-started/
-│   ├── installation.mdx      # Installation guide
-│   ├── quick-start.mdx       # Quick start tutorials
-│   └── typescript.mdx        # TypeScript guide
-├── components/
-│   ├── speech-to-text/       # Component docs
-│   ├── text-to-speech/
-│   ├── audio-recorder/
-│   └── ...
-├── guides/
-│   ├── theming.mdx          # Theming guide
-│   ├── accessibility.mdx    # A11y best practices
-│   └── ssr.mdx              # SSR support
-└── api-reference/
-```
-
-**Features:**
-- Live code playgrounds
-- API documentation
-- Platform compatibility matrix
-- Interactive component showcase
-- Search functionality (Algolia-ready)
-
-### 3. Simple Demo
+### Simple Demo
 
 A standalone HTML demo is available at `simple-demo/index.html` that demonstrates all components without requiring build tools.
 
@@ -63,25 +41,20 @@ A standalone HTML demo is available at `simple-demo/index.html` that demonstrate
 
 ### Prerequisites
 - Node.js 18+
-- npm 9+
+- pnpm 8+
 
 ### Storybook
 ```bash
+# From project root
+pnpm run storybook
+
+# Or directly
 cd documentation/storybook
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 Access at: http://localhost:6006
-
-### Docusaurus
-```bash
-cd documentation/docusaurus
-npm install
-npm run dev
-```
-
-Access at: http://localhost:3000
 
 ### Simple Demo
 Open `simple-demo/index.html` in your browser or serve it:

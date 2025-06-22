@@ -1,23 +1,39 @@
 import { Meta } from '@storybook/blocks';
 
-<Meta title="Introduction" />
+<Meta title="📚 Documentation/Welcome" />
 
 # @mycomponents Component Library
 
-Welcome to the interactive documentation for our multi-platform component library. This Storybook showcases all available components with live examples and interactive controls.
+A comprehensive multi-platform component library focused on speech, audio, and utility components.
 
 ## 🎯 What's Inside
 
-- **Speech & Audio Components**: Speech-to-text, text-to-speech, and audio recording
-- **Utility Components**: Copy to clipboard, theme toggle, share functionality
-- **Multi-Platform Support**: Web and mobile implementations
-- **Multiple Styling Options**: Tailwind CSS, Material-UI, or unstyled
+### Speech & Audio Components
+- **Speech to Text**: Real-time speech recognition with multiple language support
+- **Text to Speech**: Natural text-to-speech synthesis with voice selection
+- **Audio Recorder**: Audio recording with waveform visualization
+
+### Utility Components  
+- **Copy to Clipboard**: Easy clipboard operations with visual feedback
+- **Theme Toggle**: Dark/light/system theme switching
+- **Share Button**: Native share API with social media fallbacks
 
 ## 🚀 Quick Start
 
+### Installation
+
 ```bash
+# React with Tailwind CSS
 npm install @mycomponents/react-tailwind
+
+# React unstyled (headless)
+npm install @mycomponents/react-unstyled
+
+# React Native  
+npm install @mycomponents/react-native
 ```
+
+### Basic Usage
 
 ```tsx
 import { SpeechToText, TextToSpeech } from '@mycomponents/react-tailwind';
@@ -25,38 +41,58 @@ import { SpeechToText, TextToSpeech } from '@mycomponents/react-tailwind';
 function App() {
   return (
     <>
-      <SpeechToText onTranscript={(text) => console.log(text)} />
-      <TextToSpeech text="Hello, world!" />
+      <SpeechToText 
+        onTranscript={(text) => console.log(text)} 
+        continuous={true}
+        lang="en-US"
+      />
+      <TextToSpeech 
+        text="Hello, world!" 
+        autoSpeak={true}
+        showControls={true}
+      />
     </>
   );
 }
 ```
 
-## 📚 Component Categories
+## 🌟 Key Features
 
-### Speech & Audio
-- **Speech to Text**: Real-time speech recognition with multiple language support
-- **Text to Speech**: Natural text-to-speech synthesis with voice selection
-- **Audio Recorder**: Audio recording with waveform visualization
+- **TypeScript First**: Full type definitions and IntelliSense support
+- **Multi-Platform**: Web (React, Vue, Svelte) and Mobile (React Native)
+- **Multiple Styling Options**: Tailwind CSS, Material-UI, Styled Components, or unstyled
+- **Tree-Shakeable**: Import only what you need
+- **SSR Compatible**: Works with Next.js, Nuxt, SvelteKit, etc.
+- **Accessible**: WCAG 2.1 compliant components
+- **Zero Dependencies**: Core packages have no external dependencies
 
-### Utilities
-- **Copy to Clipboard**: Easy clipboard operations with fallbacks
-- **Theme Toggle**: Dark/light/system theme switching
-- **Share Button**: Native share API with social media fallbacks
+## 📖 How to Use This Documentation
 
-## 🎨 Styling Options
+1. **Browse Components**: Use the sidebar to explore individual components
+2. **Interactive Demos**: Play with props using the Controls addon
+3. **Code Examples**: Copy code snippets from the Docs tab
+4. **Accessibility**: Check the A11y addon for accessibility insights
+5. **Responsive Testing**: Use the Viewport addon to test different screen sizes
 
-Each component is available in multiple styling variants:
-- **Tailwind CSS**: Pre-styled with Tailwind utility classes
-- **Material-UI**: Styled with MUI components
-- **Unstyled**: Headless components for custom styling
+## 🛠️ Platform Support
 
-## 🧪 Try It Out
+| Platform | Status | Package |
+|----------|--------|---------|
+| React + Tailwind | ✅ Available | `@mycomponents/react-tailwind` |
+| React Unstyled | 🚧 Coming Soon | `@mycomponents/react-unstyled` |
+| React Native | 🚧 Coming Soon | `@mycomponents/react-native` |
+| Vue 3 | 🚧 Coming Soon | `@mycomponents/vue` |
+| Svelte | 🚧 Coming Soon | `@mycomponents/svelte` |
 
-Use the controls panel to interact with component props in real-time. Check the "Docs" tab for detailed API documentation.
+## 📋 Browser Support
 
-## 📖 Resources
+- Chrome 66+
+- Firefox 62+
+- Safari 12+
+- Edge 79+
 
-- [GitHub Repository](https://github.com/yourusername/component-library)
-- [NPM Package](https://www.npmjs.com/org/mycomponents)
-- [Full Documentation](https://docs.mycomponents.dev)
+*Note: Speech APIs require HTTPS in production*
+
+---
+
+**Ready to explore?** Start with the **Speech to Text** component to see our library in action!

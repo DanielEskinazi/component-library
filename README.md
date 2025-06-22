@@ -9,16 +9,15 @@ A comprehensive component library that works across web and mobile platforms, wi
 - **TypeScript First**: Full type definitions for excellent DX
 - **Tree-Shakeable**: Only import what you need
 - **SSR Compatible**: Works with Next.js, Nuxt, and other SSR frameworks
-- **Comprehensive Documentation**: Storybook + Docusaurus
+- **Comprehensive Documentation**: Interactive Storybook with MDX
 - **Zero Configuration**: Works out of the box with sensible defaults
 
 ## 📦 Packages
 
-### Core Packages
-- `@mycomponents/speech-to-text-core` - Speech recognition functionality
-- `@mycomponents/text-to-speech-core` - Text-to-speech synthesis
-- `@mycomponents/audio-recorder-core` - Audio recording with waveform analysis
-- `@mycomponents/utils` - Shared utilities and helpers
+### Core Packages (Domain-Based Architecture)
+- `@mycomponents/audio-core` - Speech recognition, TTS, and audio recording
+- `@mycomponents/ui-core` - Theming, clipboard, and sharing utilities  
+- `@mycomponents/utils` - General utilities (browser detection, events, timing)
 
 ### Web Components
 - `@mycomponents/react-tailwind` - React components styled with Tailwind CSS
@@ -36,10 +35,13 @@ A comprehensive component library that works across web and mobile platforms, wi
 ### Installation
 
 ```bash
-# Install specific components
-npm install @mycomponents/speech-to-text-core @mycomponents/react-tailwind
+# Install React components with Tailwind styling
+npm install @mycomponents/react-tailwind
 
-# Or use the CLI
+# Install core packages separately (for custom implementations)
+npm install @mycomponents/audio-core @mycomponents/ui-core
+
+# Or use the CLI (coming soon)
 npx @mycomponents/cli add speech-to-text --platform=react --style=tailwind
 ```
 
@@ -75,7 +77,7 @@ function App() {
 ### Prerequisites
 
 - Node.js >= 18.0.0
-- npm >= 9.0.0
+- pnpm >= 8.0.0
 
 ### Setup
 
@@ -85,13 +87,13 @@ git clone https://github.com/yourusername/component-library.git
 cd component-library
 
 # Install dependencies
-npm install
+pnpm install
 
 # Build all packages
-npm run build
+pnpm run build
 
-# Start development
-npm run dev
+# Start Storybook
+pnpm run storybook
 ```
 
 ### Available Scripts
@@ -101,7 +103,6 @@ npm run dev
 - `npm run test` - Run tests
 - `npm run lint` - Lint code
 - `npm run storybook` - Start Storybook
-- `npm run docs` - Start documentation site
 - `npm run create-component` - Scaffold a new component
 
 ## 📚 Documentation
@@ -154,17 +155,19 @@ npm run dev
 ## 🏗️ Architecture
 
 ```
-my-components/
+@mycomponents/
 ├── packages/
-│   ├── core/                    # Platform-agnostic business logic
-│   ├── web/                     # Web implementations
-│   ├── mobile/                  # Mobile implementations
-│   └── universal/               # Cross-platform components
+│   ├── core/                    # Domain-based core packages
+│   │   ├── audio/              # Speech, TTS, recording
+│   │   ├── ui/                 # Theming, clipboard, sharing
+│   │   └── utils/              # General utilities
+│   ├── web/
+│   │   └── react/
+│   │       └── tailwind/       # React + Tailwind components
+│   └── mobile/                  # Mobile implementations (coming soon)
 ├── documentation/
-│   ├── storybook/              # Component playground
-│   └── docusaurus/             # Documentation site
+│   └── storybook/              # Interactive docs + playground
 ├── examples/                    # Example applications
-├── playground/                  # Development playground
 └── tools/                      # CLI and build tools
 ```
 
@@ -179,7 +182,7 @@ MIT © [Your Name]
 ## 🙏 Acknowledgments
 
 Built with:
-- [Turborepo](https://turbo.build/) for monorepo management
-- [tsup](https://tsup.egoist.dev/) for building
-- [Storybook](https://storybook.js.org/) for component development
-- [Docusaurus](https://docusaurus.io/) for documentation
+- [pnpm](https://pnpm.io/) + [Turborepo](https://turbo.build/) for monorepo management
+- [tsup](https://tsup.egoist.dev/) for fast TypeScript bundling
+- [Storybook](https://storybook.js.org/) for interactive documentation  
+- Domain-based architecture for infinite scalability

@@ -1,0 +1,202 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="📚 Documentation/Installation" />
+
+# Installation Guide
+
+Get started with @mycomponents in your project.
+
+## Quick Install
+
+```bash
+npm install @mycomponents/react-tailwind
+```
+
+## Platform-Specific Installation
+
+### React with Tailwind CSS
+
+```bash
+npm install @mycomponents/react-tailwind
+```
+
+**Requirements:**
+- React 16.8+
+- Tailwind CSS 3.0+
+
+**Setup:**
+```tsx
+import { SpeechToText } from '@mycomponents/react-tailwind';
+
+function App() {
+  return (
+    <SpeechToText onTranscript={(text) => console.log(text)} />
+  );
+}
+```
+
+### React Unstyled (Headless)
+
+```bash
+npm install @mycomponents/react-unstyled
+```
+
+**Requirements:**
+- React 16.8+
+
+**Setup:**
+```tsx
+import { SpeechToText } from '@mycomponents/react-unstyled';
+
+function App() {
+  return (
+    <SpeechToText 
+      onTranscript={(text) => console.log(text)}
+      className="your-custom-styles"
+    />
+  );
+}
+```
+
+### React Native
+
+```bash
+npm install @mycomponents/react-native
+```
+
+**Requirements:**
+- React Native 0.60+
+- Expo SDK 47+ (if using Expo)
+
+## TypeScript Support
+
+All packages include TypeScript definitions out of the box:
+
+```tsx
+import { SpeechToText, type SpeechToTextProps } from '@mycomponents/react-tailwind';
+
+const MyComponent: React.FC<SpeechToTextProps> = (props) => {
+  return <SpeechToText {...props} />;
+};
+```
+
+## CDN Usage
+
+For quick prototyping, use our CDN builds:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://unpkg.com/@mycomponents/react-tailwind/dist/index.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const { SpeechToText } = MyComponents;
+    // Use components here
+  </script>
+</body>
+</html>
+```
+
+## Next.js Setup
+
+For Next.js projects, add to your `next.config.js`:
+
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  transpilePackages: ['@mycomponents/react-tailwind'],
+}
+
+module.exports = nextConfig
+```
+
+## Tailwind CSS Configuration
+
+Add our component styles to your `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@mycomponents/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## Browser Permissions
+
+Some components require browser permissions:
+
+### Speech Recognition
+```tsx
+// Request microphone permission
+const SpeechComponent = () => {
+  useEffect(() => {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(() => console.log('Microphone access granted'))
+      .catch(() => console.log('Microphone access denied'));
+  }, []);
+  
+  return <SpeechToText />;
+};
+```
+
+### Audio Recording
+```tsx
+// Check for required APIs
+const AudioComponent = () => {
+  const isSupported = typeof MediaRecorder !== 'undefined';
+  
+  if (!isSupported) {
+    return <div>Audio recording not supported</div>;
+  }
+  
+  return <AudioRecorder />;
+};
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**"Module not found" error:**
+```bash
+# Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+**TypeScript errors:**
+```bash
+# Ensure you have the latest TypeScript
+npm install -D typescript@latest
+```
+
+**Tailwind styles not applying:**
+- Ensure Tailwind is properly configured
+- Check that our component paths are in your `content` array
+
+**Speech APIs not working:**
+- Ensure you're using HTTPS in production
+- Check browser compatibility
+- Verify microphone permissions
+
+### Getting Help
+
+- Check our [GitHub Issues](https://github.com/your-org/component-library/issues)
+- Read component-specific documentation in this Storybook
+- Join our [Discord community](https://discord.gg/your-server)
+
+## What's Next?
+
+- Explore components in the sidebar
+- Check out the **Getting Started** examples
+- Read about **Theming** and customization
