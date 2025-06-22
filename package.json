@@ -1,0 +1,54 @@
+{
+  "name": "@mycomponents/root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Multi-platform component library with comprehensive documentation",
+  "workspaces": [
+    "packages/*",
+    "packages/core/*",
+    "packages/web/*",
+    "packages/web/react/*",
+    "packages/web/vue/*",
+    "packages/web/svelte/*",
+    "packages/mobile/*",
+    "packages/mobile/react-native/*",
+    "documentation/*",
+    "examples/*",
+    "playground",
+    "tools/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "clean": "turbo run clean && rimraf node_modules",
+    "storybook": "npm run storybook -w @mycomponents/storybook",
+    "docs": "npm run dev -w @mycomponents/docs",
+    "create-component": "node scripts/create-component.js",
+    "publish-packages": "turbo run build && changeset publish",
+    "version-packages": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "turbo": "^1.11.3",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "npm@10.2.4",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

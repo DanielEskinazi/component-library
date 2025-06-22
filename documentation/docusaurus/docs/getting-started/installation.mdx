@@ -1,0 +1,141 @@
+---
+sidebar_position: 1
+title: Installation
+---
+
+# Installation
+
+Get started with @mycomponents by installing the packages you need for your project.
+
+## Package Structure
+
+Our component library is organized as a monorepo with separate packages for different platforms and styling options:
+
+- **Core packages**: Platform-agnostic business logic
+- **Web packages**: React, Vue, Svelte, and Vanilla JS implementations
+- **Mobile packages**: React Native implementations
+- **Utility packages**: Shared utilities and helpers
+
+## Quick Install
+
+### React with Tailwind CSS
+
+```bash
+npm install @mycomponents/react-tailwind
+```
+
+### React Headless (Unstyled)
+
+```bash
+npm install @mycomponents/react-unstyled
+```
+
+### React Native
+
+```bash
+npm install @mycomponents/react-native-unstyled
+```
+
+### Core Packages Only
+
+If you want to build your own components using our core logic:
+
+```bash
+npm install @mycomponents/speech-to-text-core @mycomponents/text-to-speech-core @mycomponents/audio-recorder-core @mycomponents/utils
+```
+
+## Using the CLI
+
+The easiest way to add components to your project is using our CLI tool:
+
+```bash
+npx @mycomponents/cli add speech-to-text --platform=react --style=tailwind
+```
+
+This will:
+1. Install the necessary dependencies
+2. Add the component to your project
+3. Set up any required configuration
+
+## Manual Installation
+
+### 1. Install Dependencies
+
+Choose the packages that match your tech stack:
+
+```bash
+# For React with Tailwind
+npm install @mycomponents/react-tailwind
+
+# For React with Material-UI
+npm install @mycomponents/react-mui
+
+# For Vue with Tailwind
+npm install @mycomponents/vue-tailwind
+
+# For React Native
+npm install @mycomponents/react-native-unstyled
+```
+
+### 2. Set Up Tailwind CSS (if using Tailwind variants)
+
+Add our Tailwind configuration to your `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: [
+    // ... your content paths
+    './node_modules/@mycomponents/react-tailwind/**/*.js',
+  ],
+  theme: {
+    extend: {
+      // Component-specific theme extensions will be merged
+    },
+  },
+  plugins: [],
+};
+```
+
+### 3. Import and Use Components
+
+```tsx
+import { SpeechToText, TextToSpeech } from '@mycomponents/react-tailwind';
+
+function App() {
+  return (
+    <div>
+      <SpeechToText onTranscript={(text) => console.log(text)} />
+      <TextToSpeech text="Hello, world!" />
+    </div>
+  );
+}
+```
+
+## TypeScript Support
+
+All packages include TypeScript definitions. No additional `@types` packages are needed.
+
+```tsx
+import { SpeechRecognitionState } from '@mycomponents/speech-to-text-core';
+import { AudioData } from '@mycomponents/audio-recorder-core';
+
+// Full type safety and autocompletion
+```
+
+## Browser Support
+
+Our components support all modern browsers:
+
+- Chrome/Edge (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- iOS Safari 12+
+- Chrome for Android
+
+Some features like Speech Recognition may have limited support in certain browsers. Components will gracefully degrade or show appropriate fallbacks.
+
+## Next Steps
+
+- Check out the [Quick Start Guide](/docs/getting-started/quick-start) to build your first app
+- Explore the [Component Gallery](/docs/category/components) to see all available components
+- Read the [TypeScript Guide](/docs/getting-started/typescript) for advanced type usage

@@ -1,0 +1,45 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Welcome" />
+
+# @mycomponents Component Library
+
+Welcome to the interactive documentation for our multi-platform component library.
+
+## 🎯 What's Inside
+
+- **Speech & Audio Components**: Speech-to-text, text-to-speech, and audio recording
+- **Utility Components**: Copy to clipboard, theme toggle, share functionality  
+- **Multi-Platform Support**: Web and mobile implementations
+- **Multiple Styling Options**: Tailwind CSS, Material-UI, or unstyled
+
+## 🚀 Quick Start
+
+```bash
+npm install @mycomponents/react-tailwind
+```
+
+```jsx
+import { SpeechToText, TextToSpeech } from '@mycomponents/react-tailwind';
+
+function App() {
+  return (
+    <>
+      <SpeechToText onTranscript={(text) => console.log(text)} />
+      <TextToSpeech text="Hello, world!" />
+    </>
+  );
+}
+```
+
+## 📚 Component Categories
+
+### Speech & Audio
+- **Speech to Text**: Real-time speech recognition with multiple language support
+- **Text to Speech**: Natural text-to-speech synthesis with voice selection
+- **Audio Recorder**: Audio recording with waveform visualization
+
+### Utilities
+- **Copy to Clipboard**: Easy clipboard operations with fallbacks
+- **Theme Toggle**: Dark/light/system theme switching
+- **Share Button**: Native share API with social media fallbacks
