@@ -1,13 +1,5 @@
-import { defineConfig } from 'tsup';
+import { createTsupConfig } from '../../../../configs/tsup.config.base.js';
 
-export default defineConfig({
-  entry: ['src/index.ts'],
-  format: ['cjs', 'esm'],
-  dts: true,
-  sourcemap: true,
+export default createTsupConfig({
   external: ['react', 'react-dom'],
-  clean: true,
-  minify: false,
-  treeshake: true,
-  splitting: false,
 });

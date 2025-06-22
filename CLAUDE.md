@@ -28,7 +28,13 @@ pnpm run build        # Build all packages with dependency ordering
 pnpm run test         # Run tests across all packages
 pnpm run lint         # Lint all packages
 pnpm run type-check   # TypeScript type checking
+pnpm run format       # Format code with Prettier
 ```
+
+### Shared Configurations
+- **Build**: `configs/tsup.config.base.js` - Shared tsup configuration
+- **TypeScript**: `tsconfig.base.json` - Base TypeScript configuration  
+- **ESLint**: `.eslintrc.base.js` - Shared linting rules
 
 ### Package-Specific Development
 ```bash
@@ -149,6 +155,19 @@ Components integrate with browser APIs requiring permissions:
 - **Text-to-Speech**: Web Speech Synthesis API
 - **Clipboard**: Navigator clipboard API with fallbacks
 - **Sharing**: Web Share API with social media fallbacks
+
+## MCP Integration
+
+This project leverages Model Context Protocol (MCP) for AI assistance:
+
+**Available MCP Servers:**
+- **Playwright MCP**: Browser automation and testing capabilities for end-to-end testing of web components
+- **GitHub MCP**: Repository operations, PRs, issues, code search
+
+**Usage Pattern:**
+- Configure MCP servers in project-specific `.mcp.json` files
+- Use MCP tools with appropriate prefixes (`mcp__playwright__`, `mcp__github__`, etc.)
+- Prefer MCP tools over CLI commands for better integration, especially for browser testing of interactive components
 
 ## Workspace Management
 

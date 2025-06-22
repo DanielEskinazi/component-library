@@ -4,18 +4,9 @@
   "private": true,
   "description": "Multi-platform component library with comprehensive documentation",
   "workspaces": [
-    "packages/*",
     "packages/core/*",
-    "packages/web/*",
     "packages/web/react/*",
-    "packages/web/vue/*",
-    "packages/web/svelte/*",
-    "packages/mobile/*",
-    "packages/mobile/react-native/*",
-    "documentation/*",
-    "examples/*",
-    "playground",
-    "tools/*"
+    "documentation/storybook"
   ],
   "scripts": {
     "dev": "turbo run dev",
@@ -31,6 +22,10 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@playwright/mcp": "^0.0.29",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -40,6 +35,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "jest-environment-jsdom": "^30.0.2",
+    "playwright": "^1.53.1",
     "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
     "turbo": "^1.11.3",

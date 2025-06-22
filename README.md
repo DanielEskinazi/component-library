@@ -161,14 +161,9 @@ pnpm run storybook
 │   │   ├── audio/              # Speech, TTS, recording
 │   │   ├── ui/                 # Theming, clipboard, sharing
 │   │   └── utils/              # General utilities
-│   ├── web/
-│   │   └── react/
-│   │       └── tailwind/       # React + Tailwind components
-│   └── mobile/                  # Mobile implementations (coming soon)
-├── documentation/
-│   └── storybook/              # Interactive docs + playground
-├── examples/                    # Example applications
-└── tools/                      # CLI and build tools
+│   └── web/react/tailwind/     # React + Tailwind components
+├── documentation/storybook/    # Interactive docs + playground
+└── configs/                    # Shared build configurations
 ```
 
 ## 🤝 Contributing
