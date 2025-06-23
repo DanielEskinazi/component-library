@@ -24,6 +24,16 @@
   "dependencies": {
     "@mycomponents/audio-core": "workspace:*",
     "@mycomponents/ui-core": "workspace:*",
+    "@mycomponents/data-core": "workspace:*",
+    "@mycomponents/media-core": "workspace:*",
+    "@mycomponents/input-core": "workspace:*",
+    "@mycomponents/communication-core": "workspace:*",
+    "@mycomponents/game-core": "workspace:*",
+    "@mycomponents/ai-core": "workspace:*",
+    "@mycomponents/animation-core": "workspace:*",
+    "@mycomponents/3d-core": "workspace:*",
+    "@mycomponents/network-core": "workspace:*",
+    "@mycomponents/device-core": "workspace:*",
     "@mycomponents/utils": "workspace:*",
     "clsx": "^2.1.0"
   },

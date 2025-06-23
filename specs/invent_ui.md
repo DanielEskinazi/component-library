@@ -6,87 +6,9 @@ Invent a novel UI component that **completely replaces** an existing UI element 
 
 ## Output Requirements
 
-**File Naming**: `ui_innovation_[iteration_number].html`
+**File Naming**: `ui_innovation_[iteration_number].*`
 
-**Content Structure**: Complete self-contained HTML file with inline CSS and JavaScript
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI Innovation: [Creative Title]</title>
-    <style>
-      /* All CSS inline - no external dependencies */
-      /* Include both the innovative component styles and demo styles */
-    </style>
-  </head>
-  <body>
-    <!-- Documentation Header -->
-    <header>
-      <h1>UI Innovation: [Creative Title]</h1>
-      <div class="innovation-meta">
-        <p><strong>Replaces:</strong> [Traditional component]</p>
-        <p><strong>Innovation:</strong> [Key innovation summary]</p>
-      </div>
-    </header>
-
-    <!-- Interactive Demo Section -->
-    <main>
-      <section class="demo-container">
-        <h2>Interactive Demo</h2>
-        <!-- The actual innovative UI component implementation -->
-        <div class="innovation-component">
-          <!-- Component HTML structure -->
-        </div>
-      </section>
-
-      <!-- Traditional Comparison -->
-      <section class="comparison">
-        <h2>Traditional vs Innovation</h2>
-        <div class="comparison-grid">
-          <div class="traditional">
-            <h3>Traditional Component</h3>
-            <!-- Standard implementation for comparison -->
-          </div>
-          <div class="innovative">
-            <h3>Innovative Component</h3>
-            <!-- Link/reference to the main demo above -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Design Documentation -->
-      <section class="documentation">
-        <h2>Design Documentation</h2>
-        <div class="doc-section">
-          <h3>Interaction Model</h3>
-          <p>[How users interact with this component]</p>
-        </div>
-        <div class="doc-section">
-          <h3>Technical Implementation</h3>
-          <p>[Key technical approaches, native web APIs used]</p>
-        </div>
-        <div class="doc-section">
-          <h3>Accessibility Features</h3>
-          <p>[How accessibility is maintained/enhanced]</p>
-        </div>
-        <div class="doc-section">
-          <h3>Evolution Opportunities</h3>
-          <p>[Future enhancement possibilities]</p>
-        </div>
-      </section>
-    </main>
-
-    <script>
-      // All JavaScript inline - no external dependencies
-      // Implement the innovative component behavior
-      // Include accessibility features, error handling, edge cases
-    </script>
-  </body>
-</html>
-```
+**Content Structure**: Complete self-contained file
 
 ## Innovation Dimensions
 
